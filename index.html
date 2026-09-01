@@ -1,765 +1,1356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>NEXORA STUDIO | Digital Content Studio</title>
-
-    <meta name="description"
-          content="NEXORA STUDIO creates professional digital content, promotional designs and short-form videos for modern education businesses.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #061521;
-            color: #f5f7fa;
-            line-height: 1.6;
-        }
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        header {
-            width: 100%;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            background: #061521;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            max-width: 1280px;
-            height: 104px;
-            margin: auto;
-            padding: 0 40px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        /* BRAND */
-
-        .brand {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-        }
-
-        .brand img {
-    height: 50px;
-    width: auto;
-    display: block;
-}
-
-        /* If the image doesn't load,
-           use text instead. */
-
-        .brand-text {
-            display: none;
-            font-size: 25px;
-            font-weight: 800;
-            letter-spacing: 4px;
-        }
-
-        .brand-text span {
-            color: #13b9bd;
-        }
-
-        /* NAVIGATION */
-
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 38px;
-        }
-
-        nav a {
-            color: #b9c4ce;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.25s ease;
-        }
-
-        nav a:hover {
-            color: #13b9bd;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .hero {
-            min-height: calc(100vh - 104px);
+  <title>NEXORA STUDIO — Create. Connect. Grow.</title>
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+  <meta
+    name="description"
+    content="NEXORA STUDIO creates professional digital content, promotional designs and short-form videos for education businesses."
+  >
 
-            text-align: center;
+  <style>
 
-            padding: 80px 20px;
+    /* =========================
+       RESET
+    ========================= */
 
-            background:
-                radial-gradient(
-                    circle at 50% 25%,
-                    rgba(0, 151, 157, 0.14),
-                    transparent 38%
-                ),
-                #061521;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .hero-content {
-            max-width: 1000px;
-            margin: auto;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .tag {
-            display: inline-block;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #071521;
+      color: #f5f8fa;
+      line-height: 1.6;
+    }
 
-            padding: 9px 20px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-            border: 1px solid rgba(19,185,189,0.5);
-            border-radius: 30px;
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
 
-            color: #13b9bd;
 
-            font-size: 13px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
+    /* =========================
+       NAVBAR
+    ========================= */
 
-            margin-bottom: 25px;
-        }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
-        .hero h1 {
-            font-size: clamp(70px, 10vw, 130px);
-            line-height: 0.95;
-            letter-spacing: 7px;
-            font-weight: 800;
+      background: rgba(7, 21, 33, 0.96);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-            margin-bottom: 25px;
-        }
+      backdrop-filter: blur(10px);
+    }
 
-        .hero h1 span {
-            color: #13b9bd;
-        }
+    .nav-inner {
+      height: 76px;
 
-        .hero h2 {
-            font-size: 32px;
-            font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-            margin-bottom: 28px;
-        }
+    /* NEXORA LOGO */
 
-        .hero-description {
-            max-width: 800px;
-            margin: 0 auto 42px;
+    .brand {
+      display: flex;
+      align-items: center;
 
-            color: #aebdca;
+      text-decoration: none;
+      color: white;
 
-            font-size: 19px;
-        }
+      width: 110px;
+      height: 58px;
+    }
 
-        /* =========================
-           BUTTONS
-        ========================= */
+    .brand img {
+      width: 110px;
+      height: 58px;
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
+      object-fit: contain;
+      object-position: center;
 
-            flex-wrap: wrap;
-        }
+      display: block;
+    }
 
-        .btn {
-            display: inline-block;
+    /* NAVIGATION LINKS */
 
-            padding: 17px 30px;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
 
-            border-radius: 9px;
+      font-size: 16px;
+      color: #b8c5ce;
+    }
 
-            font-size: 16px;
-            font-weight: 700;
+    .nav-links a {
+      transition: 0.2s ease;
+    }
 
-            text-decoration: none;
+    .nav-links a:hover {
+      color: #13b9bd;
+    }
 
-            transition: 0.25s ease;
-        }
 
-        .btn-primary {
-            background: #13b9bd;
-            color: #061521;
-        }
+    /* =========================
+       HERO
+    ========================= */
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background: #20cbd0;
-        }
+    .hero {
+      min-height: 680px;
 
-        .btn-secondary {
-            border: 1px solid #344b5d;
-            color: white;
-            background: transparent;
-        }
+      display: flex;
+      align-items: center;
 
-        .btn-secondary:hover {
-            border-color: #13b9bd;
-            color: #13b9bd;
-            transform: translateY(-3px);
-        }
+      text-align: center;
 
-        /* =========================
-           SECTIONS
-        ========================= */
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(19, 185, 189, 0.14),
+          transparent 35%
+        ),
+        #071521;
+    }
 
-        section {
-            padding: 100px 20px;
-        }
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
 
-        .section-container {
-            max-width: 1150px;
-            margin: auto;
-            text-align: center;
-        }
+    .eyebrow {
+      display: inline-block;
 
-        .section-title {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
+      color: #13b9bd;
 
-        .section-description {
-            color: #9eafbc;
-            max-width: 700px;
-            margin: auto;
-        }
+      border: 1px solid rgba(19, 185, 189, 0.35);
 
-        /* SERVICES */
+      padding: 7px 16px;
 
-        .services {
-            background: #081c29;
-        }
+      border-radius: 50px;
 
-        .cards {
-            margin-top: 55px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
 
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
+      margin-bottom: 25px;
+    }
 
-        .card {
-            padding: 35px 25px;
+    .hero h1 {
+      font-size: clamp(52px, 10vw, 100px);
 
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 14px;
+      line-height: 0.95;
 
-            background: rgba(255,255,255,0.025);
+      letter-spacing: 8px;
 
-            text-align: left;
+      margin-bottom: 18px;
+    }
 
-            transition: 0.25s ease;
-        }
+    .hero h1 span {
+      color: #13b9bd;
+    }
 
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(19,185,189,0.5);
-        }
+    .hero h2 {
+      font-size: clamp(18px, 3vw, 27px);
 
-        .card h3 {
-            margin-bottom: 12px;
-            font-size: 21px;
-        }
+      font-weight: 400;
 
-        .card p {
-            color: #9eafbc;
-        }
+      color: #d5e0e6;
 
-        /* =========================
-           WORK
-        ========================= */
+      margin-bottom: 22px;
+    }
 
-        .work-grid {
-            margin-top: 50px;
+    .hero p {
+      max-width: 650px;
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
+      margin: auto;
 
-        .work-card {
-            min-height: 220px;
+      color: #9eafb9;
 
-            padding: 30px;
+      font-size: 17px;
+    }
 
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
 
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 15px;
+    /* =========================
+       BUTTONS
+    ========================= */
 
-            background: linear-gradient(
-                135deg,
-                #0b2635,
-                #071923
-            );
+    .buttons {
+      display: flex;
 
-            text-align: left;
-        }
+      justify-content: center;
 
-        .work-card h3 {
-            margin-bottom: 8px;
-        }
+      gap: 14px;
 
-        .work-card p {
-            color: #9eafbc;
-        }
+      margin-top: 35px;
 
-        /* =========================
-           PACKAGES
-        ========================= */
+      flex-wrap: wrap;
+    }
 
-        .packages {
-            background: #081c29;
-        }
+    .btn {
+      padding: 14px 25px;
 
-        .package-card {
-            margin: 50px auto 0;
+      border-radius: 8px;
 
-            max-width: 500px;
+      font-weight: 700;
 
-            padding: 40px;
+      font-size: 14px;
 
-            border: 1px solid rgba(19,185,189,0.3);
-            border-radius: 16px;
+      transition: 0.2s ease;
+    }
 
-            background: #061521;
-        }
+    .btn-primary {
+      background: #13b9bd;
 
-        .package-card h3 {
-            font-size: 27px;
-            margin-bottom: 15px;
-        }
+      color: #071521;
+    }
 
-        .package-card p {
-            color: #aebdca;
-            margin-bottom: 25px;
-        }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
 
-        /* =========================
-           ABOUT
-        ========================= */
+    .btn-secondary {
+      border: 1px solid #40515c;
 
-        .about-text {
-            max-width: 800px;
-            margin: 35px auto 0;
+      color: white;
+    }
 
-            color: #aebdca;
-            font-size: 18px;
-        }
+    .btn-secondary:hover {
+      border-color: #13b9bd;
 
-        /* =========================
-           CONTACT
-        ========================= */
+      color: #13b9bd;
+    }
 
-        .contact {
-            background: #081c29;
-        }
 
-        .contact-box {
-            margin-top: 40px;
-        }
+    /* =========================
+       SECTIONS
+    ========================= */
 
-        .contact-box a {
-            color: #13b9bd;
-            text-decoration: none;
-            font-size: 20px;
-        }
+    section {
+      padding: 100px 0;
+    }
 
-        /* =========================
-           FOOTER
-        ========================= */
+    .section-heading {
+      text-align: center;
 
-        footer {
-            padding: 30px 20px;
+      max-width: 650px;
 
-            text-align: center;
+      margin: 0 auto 55px;
+    }
 
-            border-top: 1px solid rgba(255,255,255,0.08);
+    .section-heading .label {
+      color: #13b9bd;
 
-            color: #718291;
-        }
+      font-size: 12px;
 
-        /* =========================
-           MOBILE
-        ========================= */
+      font-weight: 700;
 
-        @media (max-width: 800px) {
+      letter-spacing: 3px;
 
-            .navbar {
-                height: auto;
-                min-height: 90px;
-                padding: 18px 20px;
+      text-transform: uppercase;
+    }
 
-                flex-direction: column;
-                gap: 20px;
-            }
+    .section-heading h2 {
+      font-size: 42px;
 
-            nav {
-                gap: 18px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+      margin: 12px 0;
+    }
 
-            .hero {
-                min-height: calc(100vh - 150px);
-                padding: 70px 20px;
-            }
+    .section-heading p {
+      color: #9eafb9;
+    }
 
-            .hero h1 {
-                font-size: 60px;
-                letter-spacing: 3px;
-            }
 
-            .hero h2 {
-                font-size: 25px;
-            }
+    /* =========================
+       SERVICES
+    ========================= */
 
-            .hero-description {
-                font-size: 17px;
-            }
+    .services {
+      background: #0a1c2a;
+    }
 
-            .cards,
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
+    .service-grid {
+      display: grid;
 
-            section {
-                padding: 75px 20px;
-            }
-        }
+      grid-template-columns: repeat(3, 1fr);
 
-        @media (max-width: 500px) {
+      gap: 22px;
+    }
 
-            .hero h1 {
-                font-size: 45px;
-            }
+    .service-card {
+      padding: 35px;
 
-            .tag {
-                font-size: 11px;
-                letter-spacing: 2px;
-            }
+      background: #0e2434;
 
-            nav a {
-                font-size: 14px;
-            }
+      border: 1px solid #1b3545;
 
-            .btn {
-                width: 100%;
-                max-width: 280px;
-            }
-        }
-    </style>
+      border-radius: 14px;
+
+      transition: 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #13b9bd;
+    }
+
+    .service-number {
+      color: #13b9bd;
+
+      font-weight: 800;
+
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-size: 22px;
+
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #9eafb9;
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       PORTFOLIO
+    ========================= */
+
+    .portfolio-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .project {
+      overflow: hidden;
+
+      border-radius: 14px;
+
+      border: 1px solid #1b3545;
+
+      background: #0e2434;
+    }
+
+    .project-image {
+      height: 240px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      background: #102b3c;
+
+      color: #13b9bd;
+
+      font-size: 14px;
+
+      letter-spacing: 1px;
+    }
+
+    .project-info {
+      padding: 22px;
+    }
+
+    .project-info h3 {
+      margin-bottom: 5px;
+    }
+
+    .project-info p {
+      color: #9eafb9;
+
+      font-size: 14px;
+    }
+
+    .concept {
+      display: inline-block;
+
+      margin-top: 12px;
+
+      color: #13b9bd;
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1px;
+    }
+
+
+    /* =========================
+       PACKAGES
+    ========================= */
+
+    .pricing {
+      background: #0a1c2a;
+    }
+
+    .pricing-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 22px;
+    }
+
+    .price-card {
+      padding: 35px;
+
+      background: #0e2434;
+
+      border: 1px solid #1b3545;
+
+      border-radius: 14px;
+    }
+
+    .price-card.featured {
+      border: 1px solid #13b9bd;
+
+      transform: scale(1.02);
+    }
+
+    .price-card h3 {
+      font-size: 20px;
+    }
+
+    .price {
+      font-size: 38px;
+
+      font-weight: 800;
+
+      margin: 18px 0;
+    }
+
+    .price small {
+      font-size: 13px;
+
+      color: #9eafb9;
+    }
+
+    .features {
+      list-style: none;
+
+      color: #b8c5ce;
+
+      margin: 20px 0 28px;
+    }
+
+    .features li {
+      margin: 10px 0;
+    }
+
+    .features li::before {
+      content: "✓";
+
+      color: #13b9bd;
+
+      margin-right: 9px;
+    }
+
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+    .process-card {
+      text-align: center;
+
+      padding: 25px 15px;
+    }
+
+    .process-number {
+      width: 48px;
+      height: 48px;
+
+      margin: 0 auto 18px;
+
+      border-radius: 50%;
+
+      border: 1px solid #13b9bd;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      color: #13b9bd;
+
+      font-weight: 800;
+    }
+
+    .process-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: #8fa2ad;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #0a1c2a;
+    }
+
+    .about-box {
+      max-width: 850px;
+
+      margin: auto;
+
+      text-align: center;
+    }
+
+    .about-box p {
+      color: #aab9c2;
+
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       CONTACT / CTA
+    ========================= */
+
+    .cta {
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(19, 185, 189, 0.15),
+          transparent 45%
+        ),
+        #071521;
+    }
+
+    .cta h2 {
+      font-size: clamp(36px, 6vw, 60px);
+
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: #9eafb9;
+
+      max-width: 600px;
+
+      margin: auto;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 30px 0;
+
+      border-top: 1px solid #1b3545;
+
+      text-align: center;
+
+      color: #728590;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        gap: 18px;
+
+        font-size: 13px;
+      }
+
+      .brand,
+      .brand img {
+        width: 95px;
+        height: 52px;
+      }
+
+      .service-grid,
+      .portfolio-grid,
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .nav-inner {
+        height: 70px;
+      }
+
+      .brand,
+      .brand img {
+        width: 85px;
+        height: 48px;
+      }
+
+      .nav-links {
+        gap: 10px;
+
+        font-size: 11px;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        letter-spacing: 4px;
+      }
+
+      .hero p {
+        font-size: 15px;
+
+        padding: 0 10px;
+      }
+
+      .section-heading h2 {
+        font-size: 34px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================= -->
 
-    <header>
-        <div class="navbar">
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-            <a href="#home" class="brand">
+  <nav>
 
-                <!-- YOUR LOGO -->
-                <img src="assets/ChatGPT%20Image%20Sep%201,%202026,%2004_40_13%20PM.png" alt="NEXORA STUDIO Logo">
+    <div class="container nav-inner">
 
-                <!-- FALLBACK IF PNG DOES NOT LOAD -->
-                <div class="brand-text">
-                    NEXORA<span>.</span>
-                </div>
+      <a href="#home" class="brand">
 
-            </a>
+        <img
+          src="./assets/logo.png"
+          alt="NEXORA STUDIO"
+        >
 
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#work">Work</a>
-                <a href="#packages">Packages</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </nav>
+      </a>
 
+
+      <div class="nav-links">
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#work">
+          Work
+        </a>
+
+        <a href="#pricing">
+          Packages
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="container hero-content">
+
+      <div class="eyebrow">
+        Digital Content Studio
+      </div>
+
+
+      <h1>
+        NEXORA<span>.</span>
+      </h1>
+
+
+      <h2>
+        Create. Connect. Grow.
+      </h2>
+
+
+      <p>
+        We create professional digital content,
+        promotional designs and short-form videos
+        for modern education businesses.
+      </p>
+
+
+      <div class="buttons">
+
+        <a
+          href="#work"
+          class="btn btn-primary"
+        >
+          View Our Work
+        </a>
+
+
+        <a
+          href="#contact"
+          class="btn btn-secondary"
+        >
+          Work With Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SERVICES
+  ========================= -->
+
+  <section
+    class="services"
+    id="services"
+  >
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="label">
+          What We Do
         </div>
-    </header>
 
-
-    <!-- =========================
-         HERO
-    ========================= -->
-
-    <main>
-
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-
-                <div class="tag">
-                    Digital Content Studio
-                </div>
-
-                <h1>
-                    NEXORA<span>.</span>
-                </h1>
-
-                <h2>
-                    Create. Connect. Grow.
-                </h2>
-
-                <p class="hero-description">
-                    We create professional digital content,
-                    promotional designs and short-form videos
-                    for modern education businesses.
-                </p>
-
-                <div class="buttons">
-
-                    <a href="#work" class="btn btn-primary">
-                        View Our Work
-                    </a>
-
-                    <a href="#contact" class="btn btn-secondary">
-                        Work With Us
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             SERVICES
-        ========================= -->
-
-        <section class="services" id="services">
-
-            <div class="section-container">
-
-                <h2 class="section-title">
-                    Our Services
-                </h2>
-
-                <p class="section-description">
-                    Creative digital solutions designed to help
-                    education businesses communicate better.
-                </p>
-
-                <div class="cards">
-
-                    <div class="card">
-                        <h3>Digital Content</h3>
-                        <p>
-                            Professional educational and promotional
-                            content designed for modern audiences.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Promotional Design</h3>
-                        <p>
-                            Clean posters, social graphics,
-                            advertisements and campaign creatives.
-                        </p>
-                    </div>
-
-                    <div class="card">
-                        <h3>Short-Form Videos</h3>
-                        <p>
-                            Engaging short videos created for
-                            educational brands and businesses.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             WORK
-        ========================= -->
-
-        <section id="work">
-
-            <div class="section-container">
-
-                <h2 class="section-title">
-                    Selected Work
-                </h2>
-
-                <p class="section-description">
-                    A glimpse of the creative work we can produce.
-                </p>
-
-                <div class="work-grid">
-
-                    <div class="work-card">
-                        <h3>Education Campaign</h3>
-                        <p>
-                            Promotional creative for an education brand.
-                        </p>
-                    </div>
-
-                    <div class="work-card">
-                        <h3>Social Media Creative</h3>
-                        <p>
-                            Modern visual content designed for digital platforms.
-                        </p>
-                    </div>
-
-                    <div class="work-card">
-                        <h3>Video Content</h3>
-                        <p>
-                            Short-form educational video concepts.
-                        </p>
-                    </div>
-
-                    <div class="work-card">
-                        <h3>Brand Design</h3>
-                        <p>
-                            Clean and professional visual identity systems.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             PACKAGES
-        ========================= -->
-
-        <section class="packages" id="packages">
-
-            <div class="section-container">
-
-                <h2 class="section-title">
-                    Packages
-                </h2>
-
-                <p class="section-description">
-                    Flexible creative solutions for growing education businesses.
-                </p>
-
-                <div class="package-card">
-
-                    <h3>Starter Creative</h3>
-
-                    <p>
-                        A simple package for businesses that need
-                        professional digital creatives and content.
-                    </p>
-
-                    <a href="#contact" class="btn btn-primary">
-                        Get Started
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             ABOUT
-        ========================= -->
-
-        <section id="about">
-
-            <div class="section-container">
-
-                <h2 class="section-title">
-                    About NEXORA
-                </h2>
-
-                <p class="about-text">
-                    NEXORA STUDIO is a modern digital content studio
-                    focused on helping education businesses build
-                    stronger digital presence through creative content,
-                    design and short-form video.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTACT
-        ========================= -->
-
-        <section class="contact" id="contact">
-
-            <div class="section-container">
-
-                <h2 class="section-title">
-                    Let's Work Together
-                </h2>
-
-                <p class="section-description">
-                    Have a project in mind? Get in touch with NEXORA STUDIO.
-                </p>
-
-                <div class="contact-box">
-
-                    <a href="mailto:contact@nexorastudio.com">
-                        contact@nexorastudio.com
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================= -->
-
-    <footer>
+        <h2>
+          Content built for growth.
+        </h2>
 
         <p>
-            © 2026 NEXORA STUDIO. All rights reserved.
+          Focused creative services designed
+          to help education brands communicate
+          clearly and professionally.
         </p>
 
-    </footer>
+      </div>
+
+
+      <div class="service-grid">
+
+
+        <div class="service-card">
+
+          <div class="service-number">
+            01
+          </div>
+
+          <h3>
+            Social Media Content
+          </h3>
+
+          <p>
+            Professional educational,
+            promotional and announcement
+            designs ready to publish.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-number">
+            02
+          </div>
+
+          <h3>
+            Short-Form Video
+          </h3>
+
+          <p>
+            Engaging short videos and educational
+            content designed for modern digital
+            audiences.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-number">
+            03
+          </div>
+
+          <h3>
+            Digital Materials
+          </h3>
+
+          <p>
+            Brochures, course PDFs, presentations
+            and promotional materials for education
+            businesses.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PORTFOLIO
+  ========================= -->
+
+  <section id="work">
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="label">
+          Selected Work
+        </div>
+
+        <h2>
+          Ideas into visual experiences.
+        </h2>
+
+        <p>
+          A selection of NEXORA concept
+          projects and creative work.
+        </p>
+
+      </div>
+
+
+      <div class="portfolio-grid">
+
+
+        <div class="project">
+
+          <div class="project-image">
+            PROJECT IMAGE 01
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              Apex JEE Academy
+            </h3>
+
+            <p>
+              New Batch Admission Campaign
+            </p>
+
+            <span class="concept">
+              Concept Project
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-image">
+            PROJECT IMAGE 02
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              Nova NEET Academy
+            </h3>
+
+            <p>
+              Test Series Promotion
+            </p>
+
+            <span class="concept">
+              Concept Project
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="project">
+
+          <div class="project-image">
+            PROJECT IMAGE 03
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+              LearnSphere
+            </h3>
+
+            <p>
+              Online Course Launch Campaign
+            </p>
+
+            <span class="concept">
+              Concept Project
+            </span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PACKAGES
+  ========================= -->
+
+  <section
+    class="pricing"
+    id="pricing"
+  >
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="label">
+          Packages
+        </div>
+
+        <h2>
+          Simple. Clear. Flexible.
+        </h2>
+
+        <p>
+          Start small and scale when your
+          content needs grow.
+        </p>
+
+      </div>
+
+
+      <div class="pricing-grid">
+
+
+        <div class="price-card">
+
+          <h3>
+            NEXORA START
+          </h3>
+
+          <div class="price">
+            ₹499
+          </div>
+
+          <ul class="features">
+
+            <li>
+              5 designs
+            </li>
+
+            <li>
+              5 captions
+            </li>
+
+            <li>
+              1 revision round
+            </li>
+
+          </ul>
+
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+          >
+            Get Started
+          </a>
+
+        </div>
+
+
+        <div class="price-card featured">
+
+          <h3>
+            NEXORA GROW
+          </h3>
+
+          <div class="price">
+            ₹1,499
+          </div>
+
+          <ul class="features">
+
+            <li>
+              12 designs
+            </li>
+
+            <li>
+              12 captions
+            </li>
+
+            <li>
+              3 promotional creatives
+            </li>
+
+            <li>
+              2 revision rounds
+            </li>
+
+          </ul>
+
+          <a
+            href="#contact"
+            class="btn btn-primary"
+          >
+            Get Started
+          </a>
+
+        </div>
+
+
+        <div class="price-card">
+
+          <h3>
+            NEXORA MONTHLY
+          </h3>
+
+          <div class="price">
+            ₹2,999<small>+</small>
+          </div>
+
+          <ul class="features">
+
+            <li>
+              20 designs
+            </li>
+
+            <li>
+              20 captions
+            </li>
+
+            <li>
+              5 promotional creatives
+            </li>
+
+            <li>
+              Monthly content planning
+            </li>
+
+          </ul>
+
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+          >
+            Contact Us
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROCESS
+  ========================= -->
+
+  <section>
+
+    <div class="container">
+
+
+      <div class="section-heading">
+
+        <div class="label">
+          Our Process
+        </div>
+
+        <h2>
+          Simple from start to finish.
+        </h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            01
+          </div>
+
+          <h3>
+            Discover
+          </h3>
+
+          <p>
+            We understand your business
+            and content goals.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            02
+          </div>
+
+          <h3>
+            Create
+          </h3>
+
+          <p>
+            We develop your content
+            and visual direction.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            03
+          </div>
+
+          <h3>
+            Refine
+          </h3>
+
+          <p>
+            We make revisions based
+            on your feedback.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">
+            04
+          </div>
+
+          <h3>
+            Deliver
+          </h3>
+
+          <p>
+            Your final content is delivered
+            ready to publish.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section
+    class="about"
+    id="about"
+  >
+
+    <div class="container about-box">
+
+
+      <div class="section-heading">
+
+        <div class="label">
+          About NEXORA
+        </div>
+
+        <h2>
+          Built for the next generation
+          of education brands.
+        </h2>
+
+      </div>
+
+
+      <p>
+        NEXORA STUDIO is a modern digital
+        content studio focused on helping
+        education businesses present their
+        ideas, services and campaigns through
+        clear, professional visual content.
+      </p>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section
+    class="cta"
+    id="contact"
+  >
+
+    <div class="container">
+
+      <h2>
+        Let's build your next campaign.
+      </h2>
+
+      <p>
+        Have a project or content requirement?
+        Get in touch with NEXORA STUDIO.
+      </p>
+
+
+      <div class="buttons">
+
+        <!-- CHANGE THIS EMAIL LATER -->
+
+        <a
+          href="mailto:YOUR-EMAIL@example.com"
+          class="btn btn-primary"
+        >
+          Email NEXORA
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 NEXORA STUDIO.
+      All rights reserved.
+
+    </div>
+
+  </footer>
+
 
 </body>
 </html>
